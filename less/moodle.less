@@ -359,15 +359,22 @@ h6 {font-size: 100%;}
 }
 /* Default Three Columns - All
 ------------------------------*/
-
-.content-only {
-    #region-main-box,
-    #region-main {
-        width: 100%;
+.has-region-side-pre {
+    &.empty-region-side-pre {
+        &.has-region-side-post {
+            &.empty-region-side-post,
+            .content-only {
+                #region-main-box,
+                #region-main {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 .empty-region-side-pre {
     &.used-region-side-post {
+        #region-main-box,
         #region-main {
             width: 100%;
         }
@@ -375,7 +382,8 @@ h6 {font-size: 100%;}
 }
 .empty-region-side-post {
     &.used-region-side-pre {
-        #region-main-box {
+        #region-main-box,
+        #region-main {
             width: 100%;
         }
     }
@@ -400,5 +408,6 @@ h6 {font-size: 100%;}
         }
     }
 }
+
 /** Page layout CSS ends **/
 
